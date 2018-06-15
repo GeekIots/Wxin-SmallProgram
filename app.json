@@ -22,7 +22,7 @@
     "pages/device/webview/webview"
   ],
   "window": {
-    "disableScroll": true,
+    "disableScroll": false,
     "enablePullDownRefresh": false,
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "极客物联网",

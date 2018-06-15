@@ -448,7 +448,7 @@ function ReapConnect(that) {
                   serviceId = res.services[1].uuid
                   console.log('iso')
                 }else {
-                  serviceId = res.services[0].uuid
+                  serviceId = res.services[1].uuid
                   console.log('android')
                 }
                 that.setData({ serviceId: serviceId })

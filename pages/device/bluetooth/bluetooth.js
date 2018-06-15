@@ -22,23 +22,28 @@ Page({
    */
   onLoad: function (options) {
     var that = this
-     if(!app.user) {
-        //不是是登陆状态
-        console.log('不是是登陆状态')
-        wx.showModal({
-        title: '温馨提示:',
-        content: '注册登陆后可与服务器同步配置！',
-        success: function(res) {
-          if (res.confirm) {
-            console.log('用户点击确定')
-            // 确定,跳转到登陆
-            wx.redirectTo({ url: '../../user/login/login' })
-          } else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
+    wx.openBluetoothAdapter({
+      success: function (res) {
+        console.log(res)
       }
+    })
+    //  if(!app.user) {
+    //     //不是是登陆状态
+    //     console.log('不是是登陆状态')
+    //     wx.showModal({
+    //     title: '温馨提示:',
+    //     content: '注册登陆后可与服务器同步配置！',
+    //     success: function(res) {
+    //       if (res.confirm) {
+    //         console.log('用户点击确定')
+    //         // 确定,跳转到登陆
+    //         wx.redirectTo({ url: '../../user/login/login' })
+    //       } else if (res.cancel) {
+    //         console.log('用户点击取消')
+    //       }
+    //     }
+    //   })
+    //   }
     setTimeout(function () {
       wx.openBluetoothAdapter({
         success: function (res) {
